@@ -21,6 +21,19 @@
         <h2>소개</h2>   
         <p><a href="https://www.w3.org/TR/html5" target="_blank" title="html5 specification"><a href="https://ko.wikipedia.org/wiki/신내동">신내동</a></p> 
         <p style="margin-top: 20px;">신내동은 우리의 제2의 <u>고향입니다.</u></p>
-        <img src="flower.jpg" width="100%">
+        <input type="button" value="신내동" onclick="alert('고향')">
+        <p><input type="button" value="night" onclick="document.querySelector('body').style.backgroundColor='black'; document.querySelector('body').style.color='white';">
+        <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white'; document.querySelector('body').style.color='black';"></p>
+        <input type="text" onchange="alert('changed')">
+        <p><input type="text" onkeydown="alert('key down')"></p>
+        <img src="flower.jpg" width="100%">        
+
+
+        <h1>JavaScript</h1>
+        <script>
+            document.write(1+1);
+        </script>
+        <h1>html</h1>
+        1+1    
     </body>
 </html>
