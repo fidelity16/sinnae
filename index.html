@@ -3,11 +3,26 @@
     <head>
         <title>WEB1 - html</title>
         <meta charset="utf-8">
+        <style>
+            span{
+                color:blue;
+            }
+            .js{
+                font-weight: bold;
+                color: red;
+            }
+            #first{
+                color:green;
+            }
+        </style>
+        <script src="colors.js"></script>
     </head>
 
     <body>
-        <h1><a href="index.html">신내동의 아이들</a></h1>
-        
+        <h1><a href="index.html"><span class="js">신내동의</span> 아이들</a></h1>
+
+        <input id="night_day" type="button" value="night" onclick="nightDayHandler(this)">
+
         <ol>
             <li><a href="1.html" target="_blank">김선윤</a></li>
             <li><a href="2.html" target="_blank">김선형</a></li>
@@ -18,9 +33,9 @@
             <li><a href="7.html" target="_blank">황준섭</a></li>
         </ol>
 
-        <h2>소개</h2>   
+        <h2 style="background-color:coral; color:powderblue">소개</h2>   
         <p><a href="https://www.w3.org/TR/html5" target="_blank" title="html5 specification"><a href="https://ko.wikipedia.org/wiki/신내동">신내동</a></p> 
-        <p style="margin-top: 20px;">신내동은 우리의 제2의 <u>고향입니다.</u></p>
+        <p style="margin-top: 20px;"><span class="js">신내동은</span><span style="font-weight:bold"> 우리의</span> 제2의 <u>고향입니다.</u></p>
         <input type="button" value="신내동" onclick="alert('고향')">
         <p><input type="button" value="night" onclick="document.querySelector('body').style.backgroundColor='black'; document.querySelector('body').style.color='white';">
         <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white'; document.querySelector('body').style.color='black';"></p>
@@ -28,12 +43,27 @@
         <p><input type="text" onkeydown="alert('key down')"></p>
         <img src="flower.jpg" width="100%">        
 
-
-        <h1>JavaScript</h1>
+        <div id="first" class="js">JavaScript</div>
         <script>
             document.write(1+1);
         </script>
         <h1>html</h1>
-        1+1    
+        1+1
+        
+        <input type="button" value="night" onclick="
+            var target = document.querySelector('body');
+                if(this.value === 'night')
+                {
+                    target.style.backgroundColor = 'black';
+                    target.style.color = 'white';
+                    this.value = 'day';
+                }
+                else
+                {
+                    target.style.backgroundColor = 'white';
+                    target.style.color = 'black';
+                    this.value = 'night';
+                }
+        ">
     </body>
 </html>
